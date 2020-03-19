@@ -27,7 +27,7 @@ Ah, yes. I'm taking this up because I want to use it as a base for SailfishOS in
  * wide and macro lens don't seem to work
  * selinux is permissive - not going to fix
 
- ### Roadmap
+### Roadmap
  * [x] build tarkzim's tree as is
  * [ ] fix a few bugs found
  * [ ] maybe change the default dns servers to dns.watch?
