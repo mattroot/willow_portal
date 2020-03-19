@@ -1,0 +1,3 @@
+site_name: MattRoot's 8T stash
+markdown_extensions:
+  - pymdownx.tasklist
