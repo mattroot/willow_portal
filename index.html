@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="None">
+        
+        
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <title>MattRoot's 8T stash</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/font-awesome.min.css" rel="stylesheet">
+        <link href="css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="js/jquery-1.10.2.min.js" defer></script>
+        <script src="js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body class="homepage">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href=".">MattRoot's 8T stash</a>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#welcome-to-my-dumpster" class="nav-link">Welcome to my dumpster</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#lineageos-16" class="nav-link">LineageOS 16</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#downloads" class="nav-link">Downloads</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#roadmap" class="nav-link">Roadmap</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="welcome-to-my-dumpster">Welcome to my dumpster</h1>
+<p>This is the place where I keep all my stuff related to Redmi Note 8T together. I know the website is kinda crappy, but I'm too lazy to create a proper one, so this one should do for now.</p>
+<p>Right now I maintain one Android distribution, LineageOS 16.0 (Android Pie). I kinda explained my reasons behind maintaining this in its dedicated section.</p>
+<p>I'm planning on maintaining SailfishOS on Redmi Note 8T too, so y'know, if you're really waiting for it, let me know, I guess.</p>
+<h2 id="lineageos-16">LineageOS 16</h2>
+<p>There were a few reasons why I took this "project" up. Right now it's just an upstreamed build of LineageOS 16.0 based on <a href="https://github.com/tarkzim">Tarkzim</a>'s trees (or, maybe more correctly, <a href="https://github.com/Xiaomi-trinket-dev">Xiaomi-trinket-dev</a>). The entire list of changes for now is below:</p>
+<ul>
+<li>reverted to clang version provided by Google in Pie (literally commented out <code>TARGET_KERNEL_CLANG_VERSION</code> <a href="https://github.com/Xiaomi-trinket-dev/android_device_xiaomi_sm6125-common/blob/lineage-16.0/BoardConfigCommon.mk">here</a>,</li>
+<li>integrated <a href="https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-P.patch">this patch</a> to enable signature spoofing support, to make microG work out of the box.</li>
+</ul>
+<p>Yes, this is all I made to it. That's why I'm not even pushing the source right now - because there is nothing interesting to be pushed.</p>
+<p>My goal was to check if it's even building. I have a list of goals which I want to achieve before putting this before moving forward.</p>
+<p>Ah, yes. I'm taking this up because I want to use it as a base for SailfishOS in the future. And also I wanted to have my own customized build of Lineage filling my needs, because I have to live on Android for some time anyway.</p>
+<h3 id="known-bugs">Known bugs</h3>
+<ul>
+<li>sometimes SIM cards don't turn on after startup - usually a reboot fixes this</li>
+<li>sometimes SIM2 indicator doesn't pop up - you need to turn off and on that SIM card, <code>or just ignore it</code></li>
+<li>wide and macro lens don't seem to work</li>
+<li>selinux is permissive - not going to fix</li>
+</ul>
+<h2 id="downloads">Downloads</h2>
+<p>All the downloads are held at the <a href="https://mirror.codebucket.de/mattroot/willow_lineage16/">CodeBucket mirror</a>.</p>
+<h2 id="roadmap">Roadmap</h2>
+<ul class="task-list">
+<li class="task-list-item"><input type="checkbox" disabled checked/> build tarkzim's tree as is</li>
+<li class="task-list-item"><input type="checkbox" disabled/> fix a few bugs found</li>
+<li class="task-list-item"><input type="checkbox" disabled/> maybe change the default dns servers to dns.watch?</li>
+<li class="task-list-item"><input type="checkbox" disabled/> reconfigure the tree to use Linaro GCC toolchain to build the kernel</li>
+<li class="task-list-item"><input type="checkbox" disabled/> disable dm-verity and force-encrypt out of the box</li>
+<li class="task-list-item"><input type="checkbox" disabled/> try to create common builds for ginkgo and willow</li>
+<li class="task-list-item"><input type="checkbox" disabled/> do some extreme blob updates</li>
+<li class="task-list-item"><input type="checkbox" disabled/> prepare the tree to be used as SailfishOS base</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = ".",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="js/base.js" defer></script>
+        <script src="search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
+
+<!--
+MkDocs version : 1.1
+Build Date UTC : 2020-03-18 22:14:22
+-->
