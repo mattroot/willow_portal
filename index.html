@@ -81,11 +81,11 @@
 <p>Long story short, it's just the LineageOS build I maintain for myself to use.</p>
 <p>There were a few reasons why I took this "project" up. Right now it's just an upstreamed build of LineageOS 16.0 based on <a href="https://github.com/tarkzim">Tarkzim</a>'s trees (or, maybe more correctly, <a href="https://github.com/Xiaomi-trinket-dev">Xiaomi-trinket-dev</a>). The entire list of changes for now is below:</p>
 <ul>
-<li>reverted to clang version provided by Google in Pie (literally commented out <code>TARGET_KERNEL_CLANG_VERSION</code> <a href="https://github.com/Xiaomi-trinket-dev/android_device_xiaomi_sm6125-common/blob/lineage-16.0/BoardConfigCommon.mk">here</a>,</li>
+<li>reverted to clang version provided by Google in Pie (literally commented out <code>TARGET_KERNEL_CLANG_VERSION</code> <a href="https://github.com/Xiaomi-trinket-dev/android_device_xiaomi_sm6125-common/blob/lineage-16.0/BoardConfigCommon.mk">here</a>),</li>
 <li>integrated <a href="https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-P.patch">this patch</a> to enable signature spoofing support, to make microG work out of the box.</li>
 </ul>
 <p>Yes, this is all I made to it. That's why I'm not even pushing the source right now - because there is nothing interesting to be pushed.</p>
-<p>My goal was to check if it's even building. I have a list of goals which I want to achieve before putting this before moving forward.</p>
+<p>My goal was to check if it's even building. I have a list of goals which I want to achieve before moving forward.</p>
 <p>Ah, yes. I'm taking this up because I want to use it as a base for SailfishOS in the future. And also I wanted to have my own customized build of Lineage filling my needs, because I have to live on Android for some time anyway.</p>
 <h3 id="known-bugs">Known bugs</h3>
 <ul>
@@ -196,5 +196,5 @@
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-19 20:26:39
+Build Date UTC : 2020-03-19 20:40:50
 -->
