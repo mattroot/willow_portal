@@ -12,12 +12,12 @@ Long story short, it's just the LineageOS build I maintain for myself to use.
 
 There were a few reasons why I took this "project" up. Right now it's just an upstreamed build of LineageOS 16.0 based on [Tarkzim](https://github.com/tarkzim)'s trees (or, maybe more correctly, [Xiaomi-trinket-dev](https://github.com/Xiaomi-trinket-dev)). The entire list of changes for now is below:
 
- * reverted to clang version provided by Google in Pie (literally commented out `TARGET_KERNEL_CLANG_VERSION` [here](https://github.com/Xiaomi-trinket-dev/android_device_xiaomi_sm6125-common/blob/lineage-16.0/BoardConfigCommon.mk),
+ * reverted to clang version provided by Google in Pie (literally commented out `TARGET_KERNEL_CLANG_VERSION` [here](https://github.com/Xiaomi-trinket-dev/android_device_xiaomi_sm6125-common/blob/lineage-16.0/BoardConfigCommon.mk)),
  * integrated [this patch](https://github.com/lineageos4microg/docker-lineage-cicd/blob/master/src/signature_spoofing_patches/android_frameworks_base-P.patch) to enable signature spoofing support, to make microG work out of the box.
 
 Yes, this is all I made to it. That's why I'm not even pushing the source right now - because there is nothing interesting to be pushed.
 
-My goal was to check if it's even building. I have a list of goals which I want to achieve before putting this before moving forward.
+My goal was to check if it's even building. I have a list of goals which I want to achieve before moving forward.
 
 Ah, yes. I'm taking this up because I want to use it as a base for SailfishOS in the future. And also I wanted to have my own customized build of Lineage filling my needs, because I have to live on Android for some time anyway.
 
