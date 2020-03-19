@@ -62,7 +62,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#roadmap" class="nav-link">Roadmap</a>
+            <li class="nav-item" data-level="2"><a href="#contact" class="nav-link">Contact</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -78,6 +78,7 @@
 <p>Right now I maintain one Android distribution, LineageOS 16.0 (Android Pie). I kinda explained my reasons behind maintaining this in its dedicated section.</p>
 <p>I'm planning on maintaining SailfishOS on Redmi Note 8T too, so y'know, if you're really waiting for it, let me know, I guess.</p>
 <h2 id="lineageos-16">LineageOS 16</h2>
+<p>Long story short, it's just the LineageOS build I maintain for myself to use.</p>
 <p>There were a few reasons why I took this "project" up. Right now it's just an upstreamed build of LineageOS 16.0 based on <a href="https://github.com/tarkzim">Tarkzim</a>'s trees (or, maybe more correctly, <a href="https://github.com/Xiaomi-trinket-dev">Xiaomi-trinket-dev</a>). The entire list of changes for now is below:</p>
 <ul>
 <li>reverted to clang version provided by Google in Pie (literally commented out <code>TARGET_KERNEL_CLANG_VERSION</code> <a href="https://github.com/Xiaomi-trinket-dev/android_device_xiaomi_sm6125-common/blob/lineage-16.0/BoardConfigCommon.mk">here</a>,</li>
@@ -93,18 +94,22 @@
 <li>wide and macro lens don't seem to work</li>
 <li>selinux is permissive - not going to fix</li>
 </ul>
+<p>### Roadmap
+ * [x] build tarkzim's tree as is
+ * [ ] fix a few bugs found
+ * [ ] maybe change the default dns servers to dns.watch?
+ * [ ] reconfigure the tree to use Linaro GCC toolchain to build the kernel
+ * [ ] disable dm-verity and force-encrypt out of the box
+ * [ ] try to create common builds for ginkgo and willow
+ * [ ] do some extreme blob updates
+ * [ ] prepare the tree to be used as SailfishOS base</p>
 <h2 id="downloads">Downloads</h2>
-<p>All the downloads are held at the <a href="https://mirror.codebucket.de/mattroot/willow_lineage16/">CodeBucket mirror</a>.</p>
-<h2 id="roadmap">Roadmap</h2>
-<ul class="task-list">
-<li class="task-list-item"><input type="checkbox" disabled checked/> build tarkzim's tree as is</li>
-<li class="task-list-item"><input type="checkbox" disabled/> fix a few bugs found</li>
-<li class="task-list-item"><input type="checkbox" disabled/> maybe change the default dns servers to dns.watch?</li>
-<li class="task-list-item"><input type="checkbox" disabled/> reconfigure the tree to use Linaro GCC toolchain to build the kernel</li>
-<li class="task-list-item"><input type="checkbox" disabled/> disable dm-verity and force-encrypt out of the box</li>
-<li class="task-list-item"><input type="checkbox" disabled/> try to create common builds for ginkgo and willow</li>
-<li class="task-list-item"><input type="checkbox" disabled/> do some extreme blob updates</li>
-<li class="task-list-item"><input type="checkbox" disabled/> prepare the tree to be used as SailfishOS base</li>
+<p>All the downloads are held at the <a href="https://mirror.codebucket.de/mattroot/willow/">CodeBucket mirror</a>.</p>
+<h2 id="contact">Contact</h2>
+<p>There are two ways for you to contact me right now, Telegram and Matrix. I'm not really anxious about PMs, as long as you know what you're doing and you're not forcing me to guide you by hand. I didn't really make a group for my development, because... why, lol.</p>
+<ul>
+<li>Telegram: <a href="https://t.me/MattRoot">@MattRoot</a></li>
+<li>Matrix: <code>@mattroot:matrix.org</code></li>
 </ul></div>
             </div>
         </div>
@@ -189,5 +194,5 @@
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-18 22:14:22
+Build Date UTC : 2020-03-19 20:20:46
 -->
